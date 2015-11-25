@@ -53,3 +53,10 @@ class TestImageAspect(unittest.TestCase):
         ai = image_aspect.ImageAspect(filename_or_obj)
         ai.aspect(width=200, height=100, aspect='thumbnail')
         ai.save(new_filename)
+
+    def test_05_resizingcrop_convert(self):
+        filename_or_obj = os.path.join(CACHE_PATH, 'imgs/example1.jpg')
+        new_filename = os.path.join(CACHE_PATH, 'imgs/example1_new.jpg')
+        ai = image_aspect.ImageAspect(filename_or_obj)
+        ai.aspect(width=200, height=100, aspect='thumbnail')
+        ai.save(new_filename)
